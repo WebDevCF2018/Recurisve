@@ -1,6 +1,6 @@
 <?php
 
-// connexion
+// connection to mysql DB recusive2
 $PDO = new PDO("mysql:host=localhost;dbname=recursive2;charset=utf8", "root", "");
 $PDO->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
