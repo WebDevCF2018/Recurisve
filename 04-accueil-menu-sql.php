@@ -11,7 +11,11 @@ $PDO->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 $menuManager = new MenuManager($PDO);
 
 // datas from "menu" table in an associative array
-$recupMenu = $menuManager->getDatas();
+$recupDatasMenu = $menuManager->getDatas();
+
+// arbor's menu
+
+$menu = $menuManager->getMenu();
 
 ?>
 <!DOCTYPE html>
@@ -23,7 +27,7 @@ $recupMenu = $menuManager->getDatas();
 <body>
 <h1>Appel d'un menu récursif venant d'une base de donnée</h1>
 <pre><?php
-var_dump($recupMenu);
+var_dump($menu,$recupDatasMenu);
     ?></pre>
 
 </body>
