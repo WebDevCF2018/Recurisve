@@ -26,6 +26,7 @@ $menu = $menuManager->getMenu();
 </head>
 <body>
 <h1>Appel d'un menu récursif venant d'une base de donnée</h1>
+<nav><?=$menu?></nav>
 <pre><?php
 var_dump($menu,$recupDatasMenu);
     ?></pre>
