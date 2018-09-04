@@ -6,7 +6,7 @@
  * Time: 15:46
  */
 
-class MenuManager
+class MenuManagerB
 {
     // PDO connection
     private $db;
@@ -46,10 +46,10 @@ class MenuManager
 
         $previousLevel = 0;
 
-        $this->setMenu("<ul>");
+        $this->setMenu("<ul class='dropdown-menu'>");
 
         if (empty($array)) {
-            $this->setMenu("<li>Vous n'avez pas de rubrique</li>");
+            $this->setMenu("<li class='dropdown'>Vous n'avez pas de rubrique</li>");
         } else {
 
             foreach ($array as $value) {
@@ -61,7 +61,7 @@ class MenuManager
                     if ($value['parentMenu'] == 0 && $parent == 0) {
 
                         // open <li> tag
-                        $this->setMenu("<li>");
+                        $this->setMenu("<li class='dropdown'>");
                     }
 
                     // submenu was detected
