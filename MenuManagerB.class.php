@@ -56,18 +56,18 @@ class MenuManagerB {
                 {
                     
                     
-                    $this->setMenu('<li class="nav-item dropdown">');
-                    $this->setMenu('<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">'.$element['titleMenu'].' <span class="caret"></span></a>');
+                    $this->setMenu('<li class="dropdown-item dropdown">');
+                    $this->setMenu('<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">'.$element['titleMenu'].' <span class="caret"></span></a> ');
                     
                 }
                 else {
-                    $this->setMenu('<li>');
+                    $this->setMenu('<li class="">');
                     $this->setMenu('<a href=?id="'.$element['idMenu']. '">' . $element['titleMenu'] . '</a>');
                 }
                 if(in_array($element['idMenu'],$parents))
                 {
 
-                    $this->setMenu('<ul class="dropdown-menu" role="menu">');
+                    $this->setMenu('<ul class="dropdown-menu">');
 
                     $this->setMenu($this->createMenu($array, $element['idMenu'], $parents));
 
