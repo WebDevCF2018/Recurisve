@@ -61,11 +61,11 @@ class MenuManagerB {
                     
                 }
                 else {
-                    $this->setMenu('<li class="">');
-                    $this->setMenu('<a href=?id="'.$element['idMenu']. '">' . $element['titleMenu'] . '</a>');
+                    $this->setMenu('<li class="nav-item dropdown-item">');
+                    $this->setMenu('<a  href=?id="'.$element['idMenu']. '">' . $element['titleMenu'] . '</a>');
                 }
-                if(in_array($element['idMenu'],$parents))
-                {
+                //if(in_array($element['idMenu'],$parents))
+                //{
 
                     $this->setMenu('<ul class="dropdown-menu">');
 
@@ -73,7 +73,7 @@ class MenuManagerB {
 
                     $this->setMenu('</ul>');
 
-                }
+                //}
                 $this->setMenu('</li>');
                 
             }
